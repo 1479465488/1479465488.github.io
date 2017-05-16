@@ -1,18 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		div{
-			width:200px;
-			height:200px;
-			
-			background:red;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <script src="jquery.fullPage.min.js"></script>
+    <script src="jquery.fullPage.min.js"></script>
+    <link rel="stylesheet" href="jquery.fullPage.css">
+    <style>
+        .menu{
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .menu ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 100%;
+            height: 50px;
+            background: #ccc;
+
+
+        }
+        .menu ul li a{
+            display: block;
+            width: 20%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 600;
+            float: left;
+            cursor: pointer;
+            color:#000;
+            text-decoration: none;
+
+        }
+        .floor2{
+            position: relative;
+        }
+        .zuo{
+            width: 400px;
+            height: 400px;
+            background: #0e86ff;
+            position: absolute;
+            top: 100px;
+            left: -300px;
+            transition: all 0.5s;
+        }
+        .you{
+            width: 400px;
+            height: 400px;
+            background: #0e86ff;
+            position: absolute;
+            top: 100px;
+            right: -300px;
+            transition: all 0.5s;
+        }
+        .next{
+            width: 50px;
+            height: 50px;
+            background: pink;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            margin-left: -25px;
+            line-height: 50px;
+            text-align: center;
+            transform: rotate(90deg);
+            cursor: pointer;
+        }
+        .tu img{
+            width:100%;
+            height:100%;
+        }
+    </style>
 </head>
 <body>
-	<div></div>
+<div class="container">
+    <div class="section">
+        <div class="menu">
+            <ul>
+                <li><a href="#page1">一</a></li>
+                <li><a href="#page2">二</a></li>
+                <li><a href="#page3">三</a></li>
+                <li><a href="#page4">四</a></li>
+                <li><a href="#page5">五</a></li>
+            </ul>
+        </div>
+        <div class="tu">
+            <img src="311c91ce180153576f778ecf19465b3f.jpg" alt="">
+        </div>
+    </div>
+    <div class="section floor2">
+        <div class="next">》</div>
+        <div class="zuo">
+            <div class="tu1"></div>
+
+        </div>
+        <div class="you"></div>
+    </div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+</div>
+<script>
+    $(".container").fullpage({
+        sectionsColor:["","#ccc","yellow","orange","pink"],
+        slidesColor:["#333","#444","#555"],
+        anchors: ['page1', 'page2', 'page3', 'page4','page5'],
+        loopBottom:true,  //是否从最后一屏到第一屏
+        fixedElements:".menu,.next",   //谁需要固定定位
+        menu:"#menu",   //跳转对应页面
+        navigation:true,  //右边点
+//        navigationPosition:right,  //点显示在左边还是右边
+        navigationColor:"yellow",
+        afterLoad:function (an,index) {   //进入这一屏时候2边东西飞入
+            if(index==2){
+                $('.zuo').animate({left:100});
+                $('.you').animate({right:100});
+
+            }
+        },
+//        onLeave:function (index) {   //离开也动画
+//            if(index==2){
+//                $('.zuo').animate({left:-300});
+//                $('.you').animate({right:-300});
+//            }
+//
+
+    }
+
+    )
+    $('.next').click(function () {
+        if($(this).hasClass('active')){
+            $.fn.fullpage.moveTo(1)
+        }else {
+
+        }
+    })
+
+</script>
 </body>
 </html>
