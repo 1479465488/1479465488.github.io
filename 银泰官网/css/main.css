@@ -1453,5 +1453,183 @@ right:-20px;
     height:370px;
 
 }
+.yinchangka{
+    width: 495px;
+    height: 399px;
+    background-color: #2A2B2A;
+    opacity: 0.97;
+    position: absolute;
+    top: 0;
+    left: 210px;
+    box-sizing: border-box;
+    display: none;
 
+}
+.yinchangka .yinchangka_left{
+    width: 295px;
+    height: 391px;
+    float: left;
+    padding: 8px 20px 0;
+
+}
+.yinchangka_left .list{
+    width: 295px;
+    height: 40px;
+    padding: 8px 0 7px 0;
+    border-bottom: 1px dotted #999;
+}
+.yinchangka_left .list:last-child{
+    border: 0;
+}
+.yinchangka_left .list h3{
+    width: 295px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+/*.bannerzuo dl dt{*/
+    /*position:relative;*/
+/*}*/
+/*.yinchangka{*/
+    /*width: 495px;*/
+    /*height: 399px;*/
+    /*background-color: #2A2B2A;*/
+
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 210px;*/
+    /*box-sizing: border-box;*/
+    /*display: none;*/
+
+/*}*/
+/*.yinchangka .yinchangka_left{*/
+    /*width: 295px;*/
+    /*height: 391px;*/
+    /*float: left;*/
+    /*padding: 8px 20px 0;*/
+
+/*}*/
+/*.yinchangka_left .list{*/
+    /*width: 295px;*/
+    /*height: 40px;*/
+    /*padding: 8px 0 7px 0;*/
+    /*border-bottom: 1px dotted #999;*/
+/*}*/
+/*.yinchangka_left .list:last-child{*/
+    /*border: 0;*/
+/*}*/
+/*.yinchangka_left .list h3{*/
+    /*width: 295px;*/
+    /*text-align: left;*/
+    /*font-size: 14px;*/
+    /*font-weight: 400;*/
+    /*color: #fff;*/
+/*}*/
+/*.yinchangka_left .list div{*/
+    /*display: block;*/
+    /*width: 295px;*/
+    /*height: 19px;*/
+/*}*/
+/*.yinchangka_left .list div a{*/
+    /*display: block;*/
+    /*margin-right: 10px;*/
+    /*float: left;*/
+    /*color: #fff;*/
+    /*font-size: 12px;*/
+    /*font-weight: 300;*/
+/*}*/
+/*.yinchangka_left .list div .aa1:nth-child(2n-1){*/
+    /*color: #e5004f;*/
+/*}*/
+/*.yinchangka_left .list div .aa1:hover{*/
+    /*color: #e5004f;*/
+/*}*/
+/*.yinchangka_right{*/
+    /*width: 145px;*/
+    /*height: 368px;*/
+    /*padding: 15px 0 15px 15px;*/
+    /*float: left;*/
+    /*background: #000;*/
+/*}*/
+/*.yinchangka_right h3{*/
+    /*width: 130px;*/
+    /*height: 26px;*/
+    /*margin-bottom: 5px;*/
+    /*text-align: left;*/
+    /*font-size: 14px;*/
+    /*color: #fff;*/
+    /*border-bottom: 1px dotted #666;*/
+/*}*/
+/*.yinchangka_right span{*/
+    /*display: block;*/
+    /*width: 130px;*/
+/*}*/
+/*.yinchangka_right span a{*/
+    /*margin-right: 10px;*/
+    /*color: #fff;*/
+    /*float: left;*/
+    /*display: inline;*/
+    /*white-space: nowrap;*/
+    /*height: 24px;*/
+    /*line-height: 24px;*/
+    /*font-size: 12px;*/
+/*}*/
+/*.yinchangka_right span a:hover{*/
+    /*color: #e5004f;*/
+/*}*/
+
+
+.bannerzuo dl dt:hover .yinchangka{
+    display: block;
+}
+.yinchangka_left .list div{
+    display: block;
+    width: 295px;
+    height: 19px;
+}
+.yinchangka_left .list div a{
+    display: block;
+    margin-right: 10px;
+    float: left;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+}
+.yinchangka_left .list div .aa1:nth-child(2n-1){
+    color: #e5004f;
+}
+.yinchangka_left .list div .aa1:hover{
+    color: #e5004f;
+}
+.yinchangka_right{
+    width: 145px;
+    height: 368px;
+    padding: 15px 0 15px 15px;
+    float: left;
+    background: #000;
+}
+.yinchangka_right h3{
+    width: 130px;
+    height: 26px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    border-bottom: 1px dotted #666;
+}
+.yinchangka_right span{
+    display: block;
+    width: 130px;
+}
+.yinchangka_right span a{
+    margin-right: 10px;
+    color: #fff;
+    float: left;
+    display: inline;
+    white-space: nowrap;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+}
 
