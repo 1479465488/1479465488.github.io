@@ -5,7 +5,7 @@
     <title>我的个人主页</title>
     <script src="jquery.min.js"></script>
     <script src="jquery.fullPage.min.js"></script>
-    <script src="echarts.js"></script>
+
     <link rel="stylesheet" href="jquery.fullPage.css">
     <link rel="icon" href="u=2416692970,2958402709&fm=23&gp=0.jpg">
     <style>
@@ -71,16 +71,16 @@
         .zuo{
             width: 500px;
             height: 500px;
-            background: #0e86ff;
+            /*background: #0e86ff;*/
             position: absolute;
-            top: 100px;
+            top: 50px;
             left: -300px;
             transition: all 0.5s;
         }
         .you{
             width: 500px;
             height: 500px;
-            background: #0e86ff;
+            /*background: #0e86ff;*/
             position: absolute;
             top: 100px;
             right: -300px;
@@ -104,22 +104,23 @@
             height:100%;
         }
         .tu1{
-            width:135px;
-            height:135px;
-            /*background:red;*/
+            width:165px;
+            height:165px;
+            background:red;
             border-radius:50%;
             overflow:hidden;
             margin:75px 0 0 186px;
         }
         .tu1 img{
-            width:135px;
-            height:135px;
-            background:#ccc;
+            width:165px;
+            height:165px;
+
 
         }
         .zuo h1{
             text-align:center;
-            font-size:16px;
+            font-size:20px;
+            color:#CCCC4A;
 
         }
         .zuo ul li{
@@ -131,13 +132,17 @@
 
         }
 .zuopin1{
-    width:580px;
-    height:100%;
+    width:500px;
+    height:500px;
+    border-radius:100%;
     float:left;
-    margin-left:100px;
-    /*background:red;*/
+    margin-left:160px;
+    background:#357EA2;
     opacity:0;
-    transition:all 1s linear;
+    transition:all 2s linear;
+    margin-top:100px;
+    border-top:1px solid #357EA2;
+
 }
         .zuopin2{
             width:580px;
@@ -146,30 +151,14 @@
             margin-right:100px;
             /*background:green;*/
             opacity:0;
-            transition:all 1s linear;
-        }
-        .zuopin1 h1{
-            text-align:center;
-            line-height:120px;
-            cursor:pointer;
-
-        }
-        .zuopin1 ul{
-            width:400px;
-            height:600px;
-            /*background:#fff;*/
-
-            margin:0 auto;
-            margin-top:10px;
-
-
+            transition:all 2s linear;
         }
 .zuopin1 ul li{
     width:200px;
     height:60px;
     /*background:green;*/
     margin:0 auto;
-
+margin-top:15px;
 
 }
 .zuopin1 ul li a{
@@ -177,9 +166,12 @@
     float:left;
     margin-top:20px;
     margin-left:20px;
-
+color:#80FB82;
 
 }
+        .zuopin1 ul li a:hover{
+            color:red;
+        }
         .logo{
             float:left;
             width:70px;
@@ -209,72 +201,123 @@
 .lianxi{
     width:100%;
     height:100%;
-
+border-top:1px solid #fff;
 }
 
 
 
         .lianxi h2{
-            line-height:140px;
-            text-align:center;
-            font-size:36px;
-            font-weight:400;
+            display:block;
+            width:100px;
+            height:50px;
+           margin:0 auto;
+            margin-top:180px;
+            cursor:pointer;
+            /*color:#183CCC;*/
         }
         .lianxi h3{
             text-align:center;
             font-size:16px;
             font-weight:100;
             line-height:30px;
+            cursor:pointer;
         }
 
         .dianhua{
-            width:500px;
+
+            width:300px;
             height:60px;
+            background:#BDFFCA;
             margin:0 auto;
             /*background:red;*/
-            margin-top:130px;
+            margin-top:70px;
 margin-left:550px;
+            border:1px solid #00ff00;
+            cursor:pointer;
         }
         .youxiang{
-            width:500px;
+            width:300px;
             height:60px;
             margin:0 auto;
-           /* background:red;*/
+            background:#BDFFCA;
             margin-top:25px;
 margin-left:550px;
+            border:1px solid #00ff00;
+            cursor:pointer;
         }
         .dizhi{
-            width:500px;
+            width:300px;
             height:60px;
             margin:0 auto;
-           /* background:red;*/
+            background:#BDFFCA;
             margin-top:25px;
-margin-left:550px;
+            margin-left:550px;
+            border:1px solid #00ff00;
+            cursor:pointer;
         }
 
         .dianhua ul li{
             float:left;
            font-size:20px;
+            line-height:60px;
         }
         .dianhua ul li:nth-child(2){
-            margin-left:30px;
+            margin-left:60px;
 
         }
          .youxiang ul li{
             float:left;
              font-size:20px;
+             line-height:60px;
+        }
+        .youxiang ul li:nth-child(1){
+            margin-left:10px;
+        }
+        .dianhua ul li:nth-child(1){
+            margin-left:10px;
+        }
+        .dizhi ul li:nth-child(1){
+            margin-left:10px;
         }
         .youxiang ul li:nth-child(2){
-            margin-left:30px;
+            margin-left:60px;
         }
          .dizhi ul li{
             float:left;
              font-size:20px;
+             line-height:60px;
         }
         .dizhi ul li:nth-child(2){
-            margin-left:30px;
+            margin-left:60px;
+        }
+        .ym2{
+            width:100%;
+            height:100%;
+            background-image:url(u=3819090489,3818754022&fm=23&gp=0.jpg);
+            background-size:100%,100%;
+            background-repeat:no-repeat;
+        }
+        .ym4{
+            width:100%;
+            height:100%;
+            background-image:url(19462408_171130083000_2.jpg);
+            background-size:100%,100%;
+            background-repeat:no-repeat;
+
+
+        }
+        .ym3{
+            width:100%;
+            height:100%;
+            background-image:url(u=3771287340,4264471813&fm=23&gp=0.jpg);
+            background-size:100%,100%;
+            background-repeat:no-repeat;
+
+
+
         }
     </style>
+
 
 </head>
 <body>
@@ -294,12 +337,13 @@ margin-left:550px;
         </div>
     </div>
     <div class="section floor2">
+        <div class="ym2">
         <!--<div class="next">》</div>-->
         <div class="zuo">
             <div class="tu1">
                 <img src="u=1573248850,2475771702&fm=23&gp=0.jpg" alt="">
             </div>
-             <h1>Web Engineer</h1>
+             <h1>Front end Engineer</h1>
             <ul>
                 <li>年龄:22</li>
                 <li>姓名:郭日东</li>
@@ -310,10 +354,12 @@ margin-left:550px;
         <div class="you">
             <div id="main" style="width: 500px;height:400px;"></div>
         </div>
+        </div>
     </div>
     <div class="section">
+        <div class="ym3">
           <div class="zuopin1">
-              <h1>网站首页展示</h1>
+
                <ul>
                    <li>
                       <div class="logo"><img src="u=4180843257,938680384&fm=23&gp=0.jpg" alt=""></div>
@@ -346,7 +392,7 @@ margin-left:550px;
 
           </div>
           <div class="zuopin2">
-              <h1>游戏应用展示</h1>
+
               <ul>
                   <li><a href="">扫雷小游戏</a></li>
                   <li><a href="">打字游戏</a></li>
@@ -354,9 +400,10 @@ margin-left:550px;
                   <li><a href="">画板</a></li>
               </ul>
           </div>
-
+        </div>
     </div>
     <div class="section">
+        <div class="ym4">
         <div class="lianxi">
             <h2>联系我</h2>
             <h3>Please contact me as soon as possible</h3>
@@ -381,14 +428,14 @@ margin-left:550px;
             </div>
         </div>
 
-
+        </div>
     </div>
     <!--<div class="section"></div>-->
 </div>
 <script src="echarts.js"></script>
 <script>
     $(".container").fullpage({
-        sectionsColor:["","#ccc","#B1CC2A","orange"],
+        sectionsColor:["","","",""],
         slidesColor:["#333","#444","#555"],
         anchors: ['page1', 'page2', 'page3', 'page4','page5'],
         loopBottom:true,  //是否从最后一屏到第一屏
