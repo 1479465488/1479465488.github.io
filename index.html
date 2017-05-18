@@ -145,13 +145,16 @@
 
 }
         .zuopin2{
-            width:580px;
-            height:100%;
-            float:right;
-            margin-right:100px;
-            /*background:green;*/
+            width:500px;
+            height:500px;
+            border-radius:100%;
+            float:left;
+            margin-left:130px;
+            background:#357EA2;
             opacity:0;
             transition:all 2s linear;
+            margin-top:100px;
+            border-top:1px solid #357EA2;
         }
 .zuopin1 ul li{
     width:200px;
@@ -188,15 +191,11 @@ color:#80FB82;
             width:200px;
             height:50px;
             margin:0 auto;
-            margin-top:20px;
-            margin-left:250px;
+            margin-top:60px;
+            margin-left:200px;
             font-size:20px;
         }
-        .zuopin2 h1{
-           text-align:center;
-            line-height:120px;
-            cursor:pointer;
-        }
+
 
 .lianxi{
     width:100%;
@@ -316,6 +315,20 @@ margin-left:550px;
 
 
         }
+        .zpzs{
+            width:0px;
+            height:0px;
+            background:red;
+            left:715px;
+            top:300px;
+cursor:pointer;
+            position:absolute;
+transition:all 2s linear;
+        }
+        .zpzs ul li{
+            margin-top:25px;
+            text-align:center;
+        }
     </style>
 
 
@@ -391,6 +404,15 @@ margin-left:550px;
 
 
           </div>
+            <div class="zpzs">
+
+                <ul>
+                    <li>作</li>
+                    <li>品</li>
+                    <li>展</li>
+                    <li>示</li>
+                </ul>
+            </div>
           <div class="zuopin2">
 
               <ul>
@@ -454,6 +476,10 @@ margin-left:550px;
 
                 $(".zuopin1").css("opacity",1)
                 $(".zuopin2").css("opacity",1)
+                $(".zpzs").css("width",30);
+                $(".zpzs").css("height",200);
+
+//                $(".zpzs").animate({top:300})
             }
         },
 //        onLeave:function (index) {   //离开也动画
