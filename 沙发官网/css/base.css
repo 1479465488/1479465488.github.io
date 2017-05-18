@@ -1,0 +1,35 @@
+ *{
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+i{
+	font-style: normal;
+}
+h1,h2,h3,h4,h5,h6,p,ul,li,ol,dl,dd,dt,form,input,textarea,pre,figure,{
+	margin: 0;
+	padding: 0;
+	list-style:none;
+	text-decoration: none;
+	font-weight: normal;
+}
+img{
+	border:0;
+}
+body{
+	/*font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;*/
+	color: #333;
+	font-size: 14px;
+}
+i,u,b{
+	font-style: normal;
+	text-decoration: none;
+	font-weight: normal;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
