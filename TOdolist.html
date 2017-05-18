@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            list-style:none;
+            box-sizing:border-box;
+        }
+
+        html, body {
+            font-family: 微软雅黑;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            width: 100%;
+            height: 100px;
+            background: #0ff;
+            line-height: 100px;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left:45px;
+        }
+
+        .inputarea {
+            width:100%;
+            height:50px;
+
+        }
+
+        #text {
+            width: 300px;
+            height: 50px;
+            float: left;
+        }
+
+        #submit {
+            width: 150px;
+            height: 50px;
+            float: left;
+            background: #33ff33;
+            border: none;
+            cursor: pointer;
+        }
+
+        .show {
+            width: 100%;
+            /*background: #369;*/
+            flex-grow: 1;
+            background: #eee;
+        }
+
+        .plan {
+            width: 50%;
+            height: 80%;
+            overflow: auto;
+            background: #369;
+            float: left;
+        }
+
+        .done {
+            width: 50%;
+            height: 80%;
+            overflow: auto;
+            background: #963;
+            float: right;
+        }
+
+        ul li {
+            border-bottom: 1px dashed #ccc;
+            /*display: flex;*/
+        }
+
+        ul li:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        ul li input {
+            float: left;
+            width: 30px;
+            height: 30px;
+        }
+
+        ul li span {
+            float: left;
+            width: 400px;
+            height: auto;
+
+            line-height: 30px;
+            color: #fff;
+            padding-left: 30px;
+        }
+
+        ul li time {
+            width: 200px;
+            height: 30px;
+            float: right;
+            background: #f33;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+        }
+
+        .contenttitle {
+            width: 50%;
+            height: 20%;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: red;
+            line-height: 30px;
+        }
+        .contenttitle:nth-child(2){
+            color:#000;
+        }
+    </style>
+</head>
+<body>
+<div class="title">TODO LIST</div>
+<div class="inputarea">
+    <input type="text" id="text">
+    <input type="button" id="submit" value="提交">
+
+</div>
+<div class="show">
+    <div class="contenttitle">未完成</div>
+    <div class="contenttitle">已完成</div>
+    <ul class="plan">
+        <li><input type="checkbox"><span contenteditable="true">1232319u232</span>
+            <time>2017/5/4 15:24</time>
+        </li>
+    </ul>
+    <ul class="done">
+        <li><input type="checkbox"><span contenteditable="true">1232319u232</span>
+            <time>2017/5/4 15:24</time>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    var text = document.querySelector("#text");
+    var submit = document.querySelector("#submit");
+    var plan = document.querySelector(".plan");
+    var done = document.querySelector(".done");
+    function getData() {
+        return localStorage.todo ? JSON.parse(localStorage.todo) : [];
+    }
+    function saveData(data) {
+        localStorage.todo = JSON.stringify(data);
+    }
+    function reWrite() {
+
+        var data = getData();
+        var str1 = "", str2 = "";
+        data.forEach(function (v, i) {
+            if (!v.done) {
+                str1 += `<li id="${i}"><input type="checkbox" onfocus="changestate(this)"><span contenteditable="true" onblur="changgecontent">${v.content}</span><time>${time(v.time)}</time></li>`
+            } else {
+                str2 += `<li id="${i}"><input type="checkbox" onfocus="del(this)"><span contenteditable="true">${v.content}</span><time>${time(v.time)}</time></li>`;
+            }
+        })
+        plan.innerHTML=str1;
+        done.innerHTML=str2;
+    }
+    reWrite();
+
+    submit.onclick = function () {
+        if (text.value == "") {
+            return;
+        }
+        var val = text.value;
+        text.value = "";
+        var data = getData();
+        var date = new Date();
+        var time = date.getTime();
+        data.push({content: val, time, done: false,})
+        saveData(data);
+        reWrite()
+    };
+    function time(t) {
+        var date = new Date();
+        date.setTime(t);
+        var year = date.getFullYear();
+        var month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+        var day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+        var hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+        return year + "/" + month + "/" + day + " " + hour + ":" + minutes + ":" + seconds;
+    }
+  function changestate(ele){
+        var id=ele.parentNode.id;
+        var data=getData();
+        data[id].done=true;
+        saveData(data);
+        reWrite()
+  }
+  function del(ele){
+      var id=ele.parentNode.id;
+      var data=getData();
+      data.splice(id,1);
+      saveData(data);
+      reWrite();
+  }
+  function changgecontent(ele){
+      var id=ele.parentNode.id;
+      var val=ele.innerHTML;
+      var data=getData();
+      data[id].content=val;
+      saveData(data);
+      reWrite();
+  }
+</script>
+</html>
