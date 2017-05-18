@@ -1100,8 +1100,9 @@ z-index: 100;
 	border-radius: 10px;
 	cursor:pointer;
 }
-.banner ul li:hover{
-
+.bannertu ul li:hover{
+background-color:#fff;
+	border:2px solid #ccc;
 }
 .liebiao{
 width:234px;
@@ -1660,17 +1661,65 @@ height: 305px;
    width:1200px;
    height:420px;
 }
-.box ul li{
-	width:296px;
-	height:420px;
-	overflow:hidden;
-    float: left;
+.tushu ul{
+	position:relative;
 }
-.box1 ul li{
+.zhuti ul{
+	position:relative;
+}
+.youxi ul{
+	position:relative;
+}
+.yingyong ul{
+	position:relative;
+}
+.tushu ul li{
 	width:296px;
 	height:420px;
-	overflow:hidden;
-    float: left;
+	list-style:none;
+	position:absolute;
+	left:296px;
+	right:0;
+}
+.zhuti ul li{
+	width:296px;
+	height:420px;
+	list-style:none;
+	position:absolute;
+	left:296px;
+	right:0;
+}
+.youxi ul li{
+	width:296px;
+	height:420px;
+	list-style:none;
+	position:absolute;
+	left:296px;
+	right:0;
+}
+.yingyong ul li{
+	width:296px;
+	height:420px;
+	list-style:none;
+	position:absolute;
+	left:296px;
+	right:0;
+}
+/*.banner ul li img{*/
+	/*width:800px;*/
+	/*height:500px;*/
+/*}*/
+.tushu > ul > li:nth-child(1){
+	left:0;
+}
+.zhuti > ul > li:nth-child(1){
+	left:0;
+}
+.youxi > ul > li:nth-child(1){
+	left:0;
+}
+.yingyong > ul > li:nth-child(1){
+	left:0;
 }
 .name{
 
@@ -1776,6 +1825,114 @@ cursor:pointer;
 	transition: all 1.5s linear;
 
 }
+.left1{
+	width:20px;
+	height:48px;
+	/*background-color: rgba(66,66,66,0.6);*/
+	position:absolute;
+	top:50%;
+	color:#fff;
+	left:0;
+	cursor:pointer;
+	line-height:48px;
+	text-align:center;
+}
+.left1:hover{
+	background-color: rgba(66,66,66,0.6);
+	transition: all 1.5s linear;
+
+}
+.right1{
+	width:20px;
+	height:48px;
+	/*background-color: rgba(66,66,66,0.6);*/
+	position:absolute;
+	top:50%;
+	color:#fff;
+	right:0;
+	cursor:pointer;
+	line-height:48px;
+	text-align:center;
+	/*background:red;*/
+}
+
+.right1:hover{
+	background-color: rgba(66,66,66,0.6);
+	transition: all 1.5s linear;
+
+}
+.left2{
+	width:20px;
+	height:48px;
+	/*background-color: rgba(66,66,66,0.6);*/
+	position:absolute;
+	top:50%;
+	color:#fff;
+	left:0;
+	cursor:pointer;
+	line-height:48px;
+	text-align:center;
+}
+.left2:hover{
+	background-color: rgba(66,66,66,0.6);
+	transition: all 1.5s linear;
+
+}
+.right2{
+	width:20px;
+	height:48px;
+	/*background-color: rgba(66,66,66,0.6);*/
+	position:absolute;
+	top:50%;
+	color:#fff;
+	right:0;
+	cursor:pointer;
+	line-height:48px;
+	text-align:center;
+	/*background:red;*/
+}
+
+.right2:hover{
+	background-color: rgba(66,66,66,0.6);
+	transition: all 1.5s linear;
+
+}
+.left3{
+	width:20px;
+	height:48px;
+	/*background-color: rgba(66,66,66,0.6);*/
+	position:absolute;
+	top:50%;
+	color:#fff;
+	left:0;
+	cursor:pointer;
+	line-height:48px;
+	text-align:center;
+}
+.left3:hover{
+	background-color: rgba(66,66,66,0.6);
+	transition: all 1.5s linear;
+
+}
+.right3{
+	width:20px;
+	height:48px;
+	/*background-color: rgba(66,66,66,0.6);*/
+	position:absolute;
+	top:50%;
+	color:#fff;
+	right:0;
+	cursor:pointer;
+	line-height:48px;
+	text-align:center;
+	/*background:red;*/
+}
+
+.right3:hover{
+	background-color: rgba(66,66,66,0.6);
+	transition: all 1.5s linear;
+
+}
 .shulunbodian{
 	width:100px;
 	height:30px;
@@ -1802,9 +1959,43 @@ cursor:pointer;
 	margin-left:20px;
 	margin-top:15px;
 }
+.shulunbodian3{
+	width:10px;
+	height:10px;
+	border-radius:100%;
+	background:#b0b0b0;
+	cursor:pointer;
+	float:left;
+	margin-left:20px;
+	margin-top:15px;
+}
+.shulunbodian4{
+	width:10px;
+	height:10px;
+	border-radius:100%;
+	background:#b0b0b0;
+	cursor:pointer;
+	float:left;
+	margin-left:20px;
+	margin-top:15px;
+}
+.shulunbodian5{
+	width:10px;
+	height:10px;
+	border-radius:100%;
+	background:#b0b0b0;
+	cursor:pointer;
+	float:left;
+	margin-left:20px;
+	margin-top:15px;
+}
+.pink{
+	background:#ff6700;
+}
 .shulunbodian1:hover{
 	background:#ff6700;
 }
+
 .tushu:hover .right{
 	background-color: rgba(66,66,66,0.6);
 	transition: all 1.5s linear;
@@ -1813,27 +2004,27 @@ cursor:pointer;
 	background-color: rgba(66,66,66,0.6);
 	transition: all 1.5s linear;
 }
-.youxi:hover .right{
+.youxi:hover .right2{
 	background-color: rgba(66,66,66,0.6);
 	transition: all 1.5s linear;
 }
-.youxi:hover .left{
+.youxi:hover .left2{
 	background-color: rgba(66,66,66,0.6);
 	transition: all 1.5s linear;
 }
-.zhuti:hover .right{
+.zhuti:hover .right1{
 	background-color: rgba(66,66,66,0.6);
 	transition: all 1.5s linear;
 }
-.zhuti:hover .left{
+.zhuti:hover .left1{
 	background-color: rgba(66,66,66,0.6);
 	transition: all 1.5s linear;
 }
-.yingyong:hover .right{
+.yingyong:hover .right3{
 	background-color: rgba(66,66,66,0.6);
 	transition: all 1.5s linear;
 }
-.yingyong:hover .left{
+.yingyong:hover .left3{
 	background-color: rgba(66,66,66,0.6);
 	transition: all 1.5s linear;
 }
