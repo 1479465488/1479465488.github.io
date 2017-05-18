@@ -26,7 +26,7 @@
     .block{
         width: 49px;
         height: 49px;
-        background: #A57FBA;
+        background: #ccc;
         float: left;
         border-bottom: 1px solid #ffffff;
         border-right: 1px solid #ffffff;
@@ -50,12 +50,13 @@
         display:none;
     }
     .num{
-        background: #7796ff;
-        line-height: 25px;
+        background:#7C72FF;
+        line-height: 50px;
         text-align: center;
+        color:#25FF44;
     }
     .flag{
-        background-image:url("img/qizhi.png") ;
+        background-image:url("img/下载.jpg") ;
         background-size: 100% 100%;
         background-position:  center center;
         background-repeat: no-repeat;
@@ -63,9 +64,9 @@
     .time,.flagnum,.restart1,.rank{
         width: 100px;
         height: 30px;
-        border-radius: 20px;
+        /*border-radius: 20px;*/
         margin: 0 auto;
-        background: #A882C1;
+        background: green;
         text-align: center;
         line-height: 30px;
         color: black;
@@ -178,18 +179,21 @@
         padding: 0;
         float: left;
     }
+    .gamestart{
+        background:green;
+    }
 </style>
 <script src="jquery.js"></script>
 <script src="sl.js"></script>
 <body>
 <div class="container">
     <div class="start" >
-        <input type="button" value="开始游戏" style="margin-top: 180px;margin-bottom: 30px;" class="gamestart">
-        <input style="text-align: center;line-height: 50px;font-size: 22px;" value="难易程度" class="chengdu">
+        <input type="button" value="开始游戏" style="margin-top: 180px;margin-bottom: 30px;background:green;" class="gamestart">
+        <input style="text-align: center;line-height: 50px;font-size: 22px;background:green;" value="难度选择" class="chengdu">
         <div class="nanyi">
-            <div class="easy different" style="margin-top: 150px;">初级(10)</div>
-            <div class="middle different">中级(15)</div>
-            <div class="high different">高级(20)</div>
+            <div class="easy different" style="margin-top: 150px;background:blue;color:#fff;">简单(10)</div>
+            <div class="middle different" style="background:green;color:#fff;">容易(15)</div>
+            <div class="high different" style="background:red;color:#fff;">困难(20)</div>
             <div class="return">    
                 <img src="img/return.png" alt="">
             </div>
@@ -198,10 +202,10 @@
     <div class="scene">
     </div>
     <div class="mask" >
-        <div>你踩雷了，下次努力吧</div>
+        <div>Game Over</div>
         <div class="button">
             <button class="restart">重新开始</button>
-            <button class="back">返回</button>
+            <!--<button class="back">返回</button>-->
         </div>
         <div class="usetime"></div>
     </div>

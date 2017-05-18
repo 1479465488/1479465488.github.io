@@ -86,6 +86,7 @@
             }
         }
         function rightclick() {
+
             if($(this).hasClass("num")){
                 return;
             }
@@ -124,9 +125,9 @@
             }
             $(".flagnum").html(num);
         }
-       // $(document).on("contextmenu",function (e) {
-       //     e.preventDefault();
-       // })
+       $(document).on("contextmenu",function (e) {
+           e.preventDefault();
+       })
 
         function time() {
             begintime++;
