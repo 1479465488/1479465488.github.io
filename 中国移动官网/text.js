@@ -204,76 +204,76 @@ window.onload=function(){
 
 
 
-window.onload=function() {
-
-
-    const box = document.querySelector(".box222");
-    const imgBox = document.querySelector(".box222 ul");
-    const imgW = parseInt(window.getComputedStyle(document.querySelector(".box222 ul li"), null).width);
-
-    const left = document.querySelector(".left11");
-    const right = document.querySelector(".right11");
-    var n = 1;
-    var flag = true;
-
-
-    var t = setInterval(move, 1000);
-    //var t1=setInterval(move("l"),1000);
-    function move(type="r") {
-        flag = false;
-        if (type == "r") {
-
-            animate(imgBox, {left: -imgW * n}, 500, function () {
-                for (let i = 0; i < n; i++) {
-                    let firstChild = imgBox.children[0];
-                    imgBox.appendChild(firstChild);
-
-                }
-                imgBox.style.left = 0;
-                flag = true;
-            })
-        } else if (type == "l") {
-            for (let i = 0; i < n; i++) {
-                let lastChild = imgBox.lastElementChild;
-                let firstChild = imgBox.children[0];
-                imgBox.insertBefore(lastChild, firstChild);
-            }
-            imgBox.style.left = -imgW * n + "px";
-            animate(imgBox, {left: 0}, 500, function () {
-                flag = true;
-            })
-        }
-
-
-    }
-
-    box.onmouseover = function () {
-        clearInterval(t);
-    }
-    box.onmouseout = function () {
-        t = setInterval(move, 1000);
-    }
-
-    left.onclick = function () {
-        if (flag) {
-            move("l")
-
-        }
-
-
-    }
-    // move("l")
-
-
-    right.onclick = function () {
-        if (flag) {
-            move("r");
-        }
-
-    }
-
-
-}
+// window.onload=function() {
+//
+//
+//     const box = document.querySelector(".box222");
+//     const imgBox = document.querySelector(".box222 ul");
+//     const imgW = parseInt(window.getComputedStyle(document.querySelector(".box222 ul li"), null).width);
+//
+//     const left = document.querySelector(".left11");
+//     const right = document.querySelector(".right11");
+//     var n = 1;
+//     var flag = true;
+//
+//
+//     var t = setInterval(move, 1000);
+//     //var t1=setInterval(move("l"),1000);
+//     function move(type="r") {
+//         flag = false;
+//         if (type == "r") {
+//
+//             animate(imgBox, {left: -imgW * n}, 500, function () {
+//                 for (let i = 0; i < n; i++) {
+//                     let firstChild = imgBox.children[0];
+//                     imgBox.appendChild(firstChild);
+//
+//                 }
+//                 imgBox.style.left = 0;
+//                 flag = true;
+//             })
+//         } else if (type == "l") {
+//             for (let i = 0; i < n; i++) {
+//                 let lastChild = imgBox.lastElementChild;
+//                 let firstChild = imgBox.children[0];
+//                 imgBox.insertBefore(lastChild, firstChild);
+//             }
+//             imgBox.style.left = -imgW * n + "px";
+//             animate(imgBox, {left: 0}, 500, function () {
+//                 flag = true;
+//             })
+//         }
+//
+//
+//     }
+//
+//     box.onmouseover = function () {
+//         clearInterval(t);
+//     }
+//     box.onmouseout = function () {
+//         t = setInterval(move, 1000);
+//     }
+//
+//     left.onclick = function () {
+//         if (flag) {
+//             move("l")
+//
+//         }
+//
+//
+//     }
+//     // move("l")
+//
+//
+//     right.onclick = function () {
+//         if (flag) {
+//             move("r");
+//         }
+//
+//     }
+//
+//
+// }
 
 
 
