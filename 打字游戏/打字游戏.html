@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background:url("images/bg.jpg") no-repeat;
+            font-family: 微软雅黑;
+            background-size: 100% 100%;
+        }
+
+        * {
+            user-select: none;
+            /*去除浏览器默认*/
+        }
+
+        .scene {
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .main {
+            width: 800px;
+            height: 100%;
+            float: left;
+            /*background:url("img/bg.png") no-repeat;*/
+            position: relative;
+        }
+        .control {
+            width: 200px;
+            height: 100%;
+            /*background-color: #8BE312;*/
+            float: left;
+            /*display: none;*/
+            position: relative;
+        }
+        .box {
+            height: 75px;
+            margin: 20px auto;
+        }
+        .box .name {
+            height: 25px;
+            font-size: 18px;
+            text-align: center;
+            line-height: 20px;
+            float: left;
+            margin-left: 80px;
+            padding-top: 29px;
+            color: #fff;
+        }
+
+        .scor, .state, .life {
+             height: 30px;
+            margin: 0 auto;
+            font-size: 18px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 5px;
+            float: left;
+            margin-left: 8px;
+            padding-top: 24px;
+            color: #fff;
+        }
+
+        .begin, .stop {
+            font-family: 微软雅黑;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .letter {
+            width: 80px;
+            height: 80px;
+            /*border: 1px solid red;*/
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            color: #000;
+            /*background: #fff;*/
+        }
+        .btn {
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            background: #FF8000;
+            text-align: center;
+            line-height: 18px;
+            color: #fff;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+       .shengm, .guanka,.defen{
+            background-image: url(img/scor.png);
+            background-repeat: no-repeat;
+        }
+        .start{
+            background-image: url(img/start.png);
+            background-repeat: no-repeat;
+            background-size: 70% 70%;
+            margin-left: 46px;
+            margin-top: 100px;
+        }
+        .zant{
+            background-image: url(img/stop.png);
+            background-repeat: no-repeat;
+            background-size: 50% auto;
+            margin-left: 64px;
+        }
+        .shouye{
+            width: 1000px;
+            height: 100%;
+            /*background:url("img/bg.png") no-repeat;*/
+            margin: 0 auto;
+            z-index: 2;
+            position: relative;
+        }
+        .logo{
+            z-index: 3;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 50%;
+            top:100px;
+        }
+        .xuan{
+            width: 50%;
+            height:70px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top:350px;
+        }
+        .zuo{
+            width: 50%;
+            float: left;
+            height: 40px;
+        }
+        .zuo img{
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 3px;
+            cursor: pointer;
+        }
+        .you{
+            width: 50%;
+            float: left;
+            height: 40px;
+        }
+        .you img{
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        .nanyi{
+            z-index: 4;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 50%;
+            top:100px;
+            height: 200px;
+            display: none;
+        }
+        .nanyi img{
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        .xuank{
+            z-index: 5;
+            position: absolute;
+            top:160px;
+            width: 80%;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .nan{
+            width: 30%;
+            float: left;
+            margin-right: 25px;
+        }
+        .zhong{
+            width: 30%;
+            float: left;
+            margin-right: 25px;
+        }
+        .yi{
+            width: 30%;
+            float: left;
+        }
+        .fanh{
+            z-index: 5;
+            position: absolute;
+            top:235px;
+            width: 30%;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .fanh  img{
+            width: 40%;
+        }
+        .fanh img:hover{
+            transform: rotate(360deg);
+            transition: all .5s linear;
+        }
+        .zuo img:hover{
+            transform: scale(1.2,1.2);
+            transition: all 1s linear;
+        }
+        .you img:hover{
+            transform: scale(1.2,1.2);
+            transition: all 1s linear;
+        }
+        .nan img:hover{
+            transform: scale(1.2,1.2);
+            transition: all 1s linear;
+        }
+        .zhong img:hover{
+            transform: scale(1.2,1.2);
+            transition: all 1s linear;
+        }
+        .yi img:hover{
+            transform: scale(1.2,1.2);
+            transition: all 1s linear;
+        }
+        .back{
+            width: 30%;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .back img{
+            width: 100%;
+        }
+        .back img:hover{
+            transform: rotate(360deg);
+            transition: all .5s linear;
+        }
+        .over{
+            width: 484px;
+            height: 419px;
+            background: url(img/over.png) no-repeat center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: none;
+        }
+        .bjdf{
+            position: absolute;
+            top:127px;
+            left: 307px;
+            font-size: 20px;
+            color: #000;
+        }
+        .maxscore{
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            top:196px;
+            left: 317px;
+            line-height: 40px;
+            font-size: 20px;
+            color: #000;
+        }
+        .over img{
+            width: 100%;
+        }
+        .panduan{
+            width: 40%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top:240px;
+            z-index: 8;
+
+        }
+        .zuob{
+            width: 50%;
+            float: left;
+            position: absolute;
+            left:-30px;
+        }
+        .youb{
+            width: 50%;
+            float: left;
+            position: absolute;
+            right: -30px;
+        }
+        .zuob img:hover{
+            transform: rotate(360deg);
+            transition: all .5s linear;
+        }
+        .youb img:hover{
+            transform: rotate(360deg);
+            transition: all .5s linear;
+        }
+        .paihang{
+            position: absolute;
+            top:15px;
+            left:50px;
+            width: 100px;
+            height:50px;
+            z-index: 4;
+            background: #fec743;
+            text-align: center;
+            line-height: 50px;
+            color:#fff;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor:pointer;
+        }
+        .paihangbox{
+            position: absolute;
+            width: 400px;
+            height:453px;
+            top:0;
+            left:0;
+            right:0;
+            margin:auto;
+            background: url(images/p_03.png);
+            background-size: cover;
+            padding-top:80px;
+            box-sizing:border-box;
+            text-align: center;
+            z-index:200;
+            padding-left: 0;
+            display: none;
+        }
+        .paihangbox h2{
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+<div class="shouye">
+    <img src="img/logo.png" alt="" class="logo">
+    <div class="xuan">
+        <div class="zuo">
+            <img src="img/choose.png" alt="">
+        </div>
+        <div class="you">
+            <img src="img/start.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="nanyi">
+    <img src="img/difficult.png" alt="">
+    <div class="xuank">
+        <div class="nan">
+            <img src="img/hard.png" alt="">
+        </div>
+        <div class="zhong">
+            <img src="img/medium.png" alt="">
+        </div>
+        <div class="yi">
+            <img src="img/easy.png" alt="">
+        </div>
+    </div>
+    <div class="fanh">
+        <img src="img/quit.png" alt="">
+    </div>
+</div>
+<div class="scene">
+    <!--<div class="paihang">排行榜</div>-->
+    <!--<ul class="paihangbox">-->
+        <!--<h2>排行榜</h2>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+    <!--</ul>-->
+    <div class="main"></div>
+    <div class="control">
+        <div class="box defen">
+            <div class="name ">得分:</div>
+            <div class="scor">0</div>
+        </div>
+        <div class="box guanka">
+            <div class="name">关卡:</div>
+            <div class="state">1</div>
+        </div>
+        <div class="box shengm">
+            <div class="name">生命:</div>
+            <div class="life">5</div>
+        </div>
+        <div class="box start begin">
+            <div class="begin"></div>
+        </div>
+        <div class="box zant stop">
+            <div class="stop"></div>
+        </div>
+        <div class="back">
+            <img src="img/restart.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="over">
+    <div class="scor bjdf">0</div>
+    <div class="maxscore zgdf">0</div>
+    <div class="panduan">
+        <div class="zuob">
+            <img src="img/restart.png" alt="">
+        </div>
+        <div class="youb">
+            <img src="img/back.png" alt="">
+        </div>
+    </div>
+</div>
+<script>
+    //创建字母
+    var main = document.querySelector(".main");
+    const scor = document.querySelector(".scor");
+    const bjdf= document.querySelector(".bjdf");
+    const begin = document.querySelector(".begin");
+    const stop = document.querySelector(".stop");
+    const state = document.querySelector(".state");
+    const life = document.querySelector(".life");
+    const control = document.querySelector(".control");
+    const you = document.querySelector(".you");
+    const shouye = document.querySelector(".shouye");
+    const zuo = document.querySelector(".zuo");
+    const nanyi= document.querySelector(".nanyi");
+    const fanh= document.querySelector(".fanh");
+    const back= document.querySelector(".back");
+    const over= document.querySelector(".over");
+    const zuob= document.querySelector(".zuob");
+    const youb= document.querySelector(".youb");
+    const maxscore= document.querySelector(".maxscore");
+    class Game {
+        constructor(main, scor, state, life) {
+            this.main = main;
+            this.scor = scor;
+            this.state = state;
+            this.lifele = life;
+            this.life = 5;
+            this.guan = 1;
+            this.num = 3;
+            this.fenshu = 0;
+            this.obj = {};
+            this.speed = 5;
+            this.height = window.innerHeight;
+            this.flag = true;
+            this.bestscor=localStorage.bestscor?localStorage.bestscor:0;
+        }
+
+        _creatLetter() {
+            var div = document.createElement("div");
+            div.className = "letter";
+            do {
+                var rn = Math.floor(Math.random() * 26 + 65);
+                var le = String.fromCharCode(rn);
+            } while (this.obj[le]);
+            div.style.backgroundImage="url(images/"+le+".png)";
+            div.style.backgroundSize="100% 100%";
+            do {
+                var rl = Math.random() * 720;
+            } while (this._check(rl));
+            var rt = -Math.random() * 100;
+            div.style.left = rl + "px";
+            div.style.top = rt + "px";
+            this.obj[le] = {left: rl, top: rt, el: div};
+            this.main.appendChild(div);
+        }
+
+        _check(left) {
+            for (var i in this.obj) {
+                if (left > this.obj[i].left - 80 && left < this.obj[i].left + 80) {
+                    return true;
+                }
+            }
+        }
+
+        start() {
+            for (var i = 0; i < this.num; i++) {
+                this._creatLetter();
+            }
+            this._move();
+            this._keydown();
+            this.flag = false;
+        }
+
+        _move() {
+            this.st = setInterval(function () {
+                for (var i in this.obj) {
+                    var t = this.obj[i].top;
+                    t += this.speed;
+                    this.obj[i].top = t;
+                    this.obj[i].el.style.top = t + "px";
+                    if (t > this.height) {
+                        this.life--;
+                        this.lifele.innerHTML = this.life;
+                        this.main.removeChild(this.obj[i].el);
+                        delete this.obj[i];
+                        this._creatLetter();
+                        if (this.life == 0) {
+                            this._gameover();
+                            return;
+                        }
+                    }
+                }
+            }.bind(this), 50)
+        }
+
+        _keydown() {
+            document.onkeydown = function (e) {
+                var keycode = e.keyCode;
+                var l = String.fromCharCode(keycode);
+                if (this.obj[l]) {
+                    this.main.removeChild(this.obj[l].el);
+                    delete this.obj[l];
+                    this.fenshu++;
+                    scor.innerHTML = this.fenshu;
+                    bjdf.innerHTML = this.fenshu;
+                    if (this.fenshu % 10 == 0) {
+                        this._upstate();
+                    }
+                    this._creatLetter();
+                }
+            }.bind(this);
+        }
+
+        _upstate() {
+            this.guan++;
+            this.state.innerHTML = this.guan;
+            if (this.guan <= 4) {
+                this._creatLetter();
+            } else {
+                this.speed++;
+            }
+        }
+
+        _gameover() {
+            over.style.display="block";
+//            alert(`结束，分为${this.fenshu}`);
+
+//            if(this.scor.length<3||this.scor.length>=3&&this.scor>this.bestscor[2].scor){
+//                var player=prompt("请输入姓名");
+//                this.bestscor.push({player,scor:this.scor});
+//                this.bestscor.sort(function(a,b){
+//                    if(a.scor>b.scor){
+//                        return-1;
+//                    }else{
+//                        return 1;
+//                    }
+//                })
+////
+
+            this.main.innerHTML = null;
+            this.obj = {};
+            this.speed = 5;
+            this.fenshu = 0;
+            this.scor.innerHTML = 0;
+            this.life = 5;
+            this.lifele.innerHTML = 5;
+            this.guan = 1;
+            this.state.innerHTML = 1;
+            this.flag = true;
+            clearInterval(this.st);
+        }
+
+        pause() {
+            clearInterval(this.st);
+            document.onkeydown = null;
+        }
+
+        play() {
+            this._move();
+            this._keydown();
+        }
+    }
+
+    var game = new Game(main, scor, state, life);
+    begin.onclick = function () {
+        if (game.flag) {
+            game.start();
+        }
+    }
+    you.onclick=function () {
+        shouye.style.display="none";
+    }
+    zuo.onclick=function () {
+        nanyi.style.display="block"
+    }
+    fanh.onclick=function () {
+        nanyi.style.display="none";
+    }
+    back.onclick=function () {
+        shouye.style.display="block";
+    }
+    zuob.onclick=function () {
+        game.start();
+        over.style.display="none";
+    }
+    youb.onclick=function () {
+        shouye.style.display="block";
+        over.style.display="none";
+    }
+    var fl = true;
+    stop.onclick = function () {
+        if (fl) {
+            stop.style.backgroundImage = "url(img/stop.png)";
+            game.pause();
+        } else {
+            stop.style.backgroundImage = "url(img/continue.png)";
+            game.play();
+        }
+        fl = !fl;
+    }
+
+</script>
+</body>
+</html>
