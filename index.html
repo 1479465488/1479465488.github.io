@@ -136,6 +136,8 @@
     float:left;
     margin-left:100px;
     /*background:red;*/
+    opacity:0;
+    transition:all 1s linear;
 }
         .zuopin2{
             width:580px;
@@ -143,6 +145,8 @@
             float:right;
             margin-right:100px;
             /*background:green;*/
+            opacity:0;
+            transition:all 1s linear;
         }
         .zuopin1 h1{
             text-align:center;
@@ -398,6 +402,11 @@ margin-left:550px;
                 $('.zuo').animate({left:100});
                 $('.you').animate({right:100});
 
+            }
+            if(index==3){
+
+                $(".zuopin1").css("opacity",1)
+                $(".zuopin2").css("opacity",1)
             }
         },
 //        onLeave:function (index) {   //离开也动画
