@@ -208,7 +208,7 @@
 		banner.style.background=color[0];
 		var num=0;
 		var flag=true;
-		var t=setInterval(move,lubotime);
+		// var t=setInterval(move,lubotime);
 
 		function move(type="r"){
 			flag=false;
@@ -233,13 +233,13 @@
 			li[num].style.background=liactivebgColor;
 			banner.style.background=color[num];
 		}
-		banner.onmouseover=function(){
-			clearInterval(t);
-
-		}
-		banner.onmouseout=function(){
-			t=setInterval(move,lubotime);
-		}
+		// banner.onmouseover=function(){
+		// 	clearInterval(t);
+        //
+		// }
+		// banner.onmouseout=function(){
+		// 	t=setInterval(move,lubotime);
+		// }
         for(let j=0;j<li.length;j++){
         	li[j].onmouseover=function(){
         		clearInterval(t);
