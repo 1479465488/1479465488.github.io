@@ -1091,12 +1091,17 @@ z-index: 100;
 }
 .bannertu ul li{
 	float:left;
-	width:15px;
-	height:15px;
-	background:#8d8d8d;
-	margin-left:5px;
-	border-radius:100%;
+	display: block;
+	width: 6px;
+	height: 6px;
+	margin: 0 5px;
+	border: 2px solid #fff;
+	border-color: rgba(255,255,255,0.3);
+	border-radius: 10px;
 	cursor:pointer;
+}
+.banner ul li:hover{
+
 }
 .liebiao{
 width:234px;

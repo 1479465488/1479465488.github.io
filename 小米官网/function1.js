@@ -132,7 +132,7 @@ function Zlunbo(pic,bigbannerbox,lis,colorArr,tuactiveZ,liactivebgColor,Lunbotim
       }
 
       for(let j=0;j<li.length;j++){
-        li[j].onmouseover=function(){
+        li[j].onclick=function(){
           for(let i=0;i<tu.length;i++){
             tu[i].style.zIndex=tuZ;
             li[i].style.background=lisColor;
