@@ -2752,12 +2752,15 @@ margin-left:-110px;
 	line-height:35px;
 	margin-left:8px;
 }
-.xann  .iconfont{
+.xann .iconfont{
 	color:#fff;
 	font-size:16px;
 	/*text-align:center;*/
 	line-height:35px;
-	margin-left:8px;
+	margin-left:10px;
+}
+.bbc{
+	margin-right:-15px;
 }
 .jdlogo{
 	float:left;
