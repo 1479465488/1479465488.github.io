@@ -2654,6 +2654,15 @@ margin-left:-110px;
 	background-color: #7a6e6e;
 	border-radius: 3px 0 0 3px;
 }
+.zuji{
+	position: relative;
+	width: 35px;
+	height: 35px;
+	margin-bottom: 1px;
+	cursor: pointer;
+	background-color: #7a6e6e;
+	border-radius: 3px 0 0 3px;
+}
 .xiaoxi .iconfont{
 	/*position:relative;*/
 	/*width: 35px;*/
@@ -2751,6 +2760,13 @@ margin-left:-110px;
 	/*text-align:center;*/
 	line-height:35px;
 	margin-left:8px;
+}
+.zuji  .iconfont{
+	color:#fff;
+	font-size:16px;
+	/*text-align:center;*/
+	line-height:35px;
+	margin-left:5px;
 }
 .xann .iconfont{
 	color:#fff;
