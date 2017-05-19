@@ -230,6 +230,7 @@ font-weight:400;
     width:100%;
     height:100%;
 border-top:1px solid #fff;
+
 }
 
 
@@ -242,7 +243,13 @@ border-top:1px solid #fff;
             margin-top:180px;
             cursor:pointer;
             /*color:#183CCC;*/
+            transition:all 1s linear;
         }
+        /*.lianxi h2:hover{*/
+        /*transform:rotateY(180deg);*/
+
+
+        /*}*/
         .lianxi h3{
             text-align:center;
             font-size:16px;
@@ -256,10 +263,12 @@ border-top:1px solid #fff;
             width:300px;
             height:60px;
             background:#588DAC;
-            margin:0 auto;
+            position:absolute;
             /*background:red;*/
-            margin-top:70px;
-margin-left:550px;
+left:-300px;
+            top:300px;
+
+
             border:1px solid #00ff00;
             cursor:pointer;
         }
@@ -281,20 +290,23 @@ margin-left:550px;
         .youxiang{
             width:300px;
             height:60px;
-            margin:0 auto;
+            right:-300px;
+            top:400px;
             background:#588DAC;
-            margin-top:25px;
+
 margin-left:550px;
             border:1px solid #00ff00;
             cursor:pointer;
+            position:absolute;
+
         }
         .dizhi{
             width:300px;
             height:60px;
-            margin:0 auto;
+top:-80px;
+     left:540px;
             background:#588DAC;
-            margin-top:25px;
-            margin-left:550px;
+           position:absolute;
             border:1px solid #00ff00;
             cursor:pointer;
         }
@@ -529,6 +541,11 @@ margin-left:550px;
                 $(".zpzs").css("height",200);
 
 //                $(".zpzs").animate({top:300})
+            }
+            if(index==4){
+                $(".dianhua").animate({left:540})
+                $(".youxiang").animate({right:525})
+$(".dizhi").animate({top:480})
             }
         },
 //        onLeave:function (index) {   //离开也动画
