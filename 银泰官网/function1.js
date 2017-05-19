@@ -496,16 +496,17 @@ mov()
 //leftBen:左括号
 //rightBen：右括号
 
-function Tlunbo(pic,bannerBox,lis,colorArr,tuactiveopacity,liactivebgColor,lubotime,tuopacity,lisColor,zuokuohao,youkuohao){
+function Tlunbo(pic,bannerBox,lis,colorArr,tuactiveopacity,liactivebgColor,lubotime,tuopacity,lisColor,zuokuohao,youkuohao,bannerwaimian){
     const tu=$(pic);
     const banner=$(bannerBox)[0];
     const li=$(lis);
     const leftBen=$(zuokuohao)[0];
     const rightBen=$(youkuohao)[0];
     const color=colorArr;
+    let bannerwai=$(bannerwaimian);
     tu[0].style.opacity=tuactiveopacity;
     li[0].style.background=liactivebgColor;
-    banner.style.background=color[0];
+    // banner.style.background=color[0];
     var num=0;
     var flag=true;
     var t=setInterval(move,lubotime);
@@ -527,11 +528,13 @@ function Tlunbo(pic,bannerBox,lis,colorArr,tuactiveopacity,liactivebgColor,lubot
             tu[i].style.opacity=tuopacity;
             li[i].style.background=lisColor;
             banner.style.background=color[i];
+            bannerwai[i].classList.remove('one');
         }
         animate(tu[num],{opacity:tuactiveopacity},1000,function(){flag=true;});
         // tu[num].style.opacity=tuactiveopacity;
         li[num].style.background=liactivebgColor;
-        banner.style.background=color[num];
+        // banner.style.background=color[num];
+        bannerwai[num].classList.add('one');
     }
     banner.onmouseover=function(){
         clearInterval(t);
@@ -545,12 +548,14 @@ function Tlunbo(pic,bannerBox,lis,colorArr,tuactiveopacity,liactivebgColor,lubot
             for(let i=0;i<tu.length;i++){
                 tu[i].style.opacity=tuopacity;
                 li[i].style.background=lisColor;
-                banner.style.background=color[i];
+               // banner.style.background=color[i];
+                bannerwai[i].classList.remove('one');
             }
             // tu[j].style.opacity=tuactiveopacity;
             animate(tu[j],{opacity:tuactiveopacity},1000);
             li[j].style.background=liactivebgColor;
-            banner.style.background=color[j];
+           //banner.style.background=color[j];
+            bannerwai[j].classList.add('one');
             num=j;
         }
     }

@@ -836,7 +836,11 @@ function zuoyoulunbo(hezi,tupian,lunbodian11,zuokuohao,youkuohao){
     //     t = setInterval(move, 1000)
     // }
     right.onclick = function () {
-        move()
+        move();
+        // if(next=3){
+         //    return;
+		// }
+		console.log(now)
     }
     left.onclick = function () {
         move(fx = 'left')

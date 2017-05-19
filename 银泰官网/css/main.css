@@ -498,7 +498,7 @@ cursor:pointer;
     top:0;
     z-index: 1;
     opacity:1;
-    transition:all 1s linear;
+    /*transition:all 1s linear;*/
 }
 .box ul{
     width:130px;
@@ -1632,4 +1632,17 @@ right:-20px;
     line-height: 24px;
     font-size: 12px;
 }
+.bannerwai{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0 auto;
+    margin-left: -956px;
+    /*z-index: -100;*/
+    opacity: 0;
+    transition:all 1s linear;
+}
+.one{
+    opacity:1;
 
+}
