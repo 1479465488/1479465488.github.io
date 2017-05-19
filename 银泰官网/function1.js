@@ -362,12 +362,12 @@ mov()
 	    			if(sobj.scrollTop+0.5*CH>=floor[i].offsetTop){
 	    				for(let j=0;j<floor.length;j++){
 	    					// box[j].style.background="#ccc";
-                            ziti[j].style.display="none";
+                            // ziti[j].style.display="none";
                           
 	    				}
 	    				// box[i].style.background="#e5044f";
                         // ziti[i].style.display="block"
-                         ziti[j].style.display="block";
+                        //  ziti[j].style.display="block";
 	    			}
 	    			//按序加载
 	    			// if(floor[i].offsetTop>=CH+sobj.scrollTop){
