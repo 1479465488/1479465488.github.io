@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>我的个人</title>
+    <title>我的个人主页</title>
     <script src="jquery.min.js"></script>
     <script src="jquery.fullPage.min.js"></script>
 
@@ -364,28 +364,110 @@ top:800px;
         .ym3{
             width:100%;
             height:100%;
-            background-image:url(u=1881281072,2377486603&fm=23&gp=0.jpg);
+           /* background-image:url(u=1881281072,2377486603&fm=23&gp=0.jpg);*/
             background-size:100%,100%;
+            background:#ccc;
             background-repeat:no-repeat;
+            }
 
-
-
+             .container1{
+            max-width: 800px;
+            margin: 100px auto;
         }
-        /*.zpzs{*/
-            /*width:0px;*/
-            /*height:0px;*/
-            /*background:#874FFF;*/
-            /*left:715px;*/
-            /*top:300px;*/
-/*cursor:pointer;*/
-            /*position:absolute;*/
-/*transition:all 2s linear;*/
-            /*color:*/
-        /*}*/
-        /*.zpzs ul li{*/
-            /*margin-top:25px;*/
-            /*text-align:center;*/
-        /*}*/
+        .slide{
+            width: 100%;
+            min-height: 180px;
+            overflow: hidden;
+            position: relative;
+  
+        }
+        .slide .img{
+            overflow: hidden;
+            position: absolute;
+            transition: width 0.4s,height 0.4s,top 0.4s,left 0.4s,z-index 0.4s;
+        }
+        .slide .img img{
+            width: calc(100% - 14px);
+            height: calc(100% - 14px);
+            margin: 7px;
+        }
+        .slide .img1{
+            width: 40%;
+            height: 40%;
+            top: 30%;
+            left: -50%;
+            z-index: 1;
+        }
+        .slide .img2{
+            width: 60%;
+            height: 60%;
+            top: 20%;
+            left: -20%;
+            z-index: 2;
+        }
+        .slide .img3{
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            z-index: 3;
+        }
+        .slide .img4{
+            width: 60%;
+            height: 60%;
+            top: 20%;
+            left: 60%;
+            z-index: 2;
+        }
+        .slide .img5{
+            width: 40%;
+            height: 40%;
+            top: 30%;
+            left: 110%;
+            z-index: 1;
+        }
+        .slide-bt{
+            position: absolute;
+            left: 50%;
+            bottom: 13%;
+            z-index: 10;
+            cursor:pointer;
+        }
+        .slide-bt span{
+            width: 24px;
+            height: 8px;
+            background: #c9caca;
+            float: left;
+            margin: 5px;
+            border-radius: 4px;
+        }
+        .slide .slide-bt .on{
+            background: #ffd200;
+        }
+        button{
+            width: 50px;
+            margin: 20px;
+        }
+
+
+
+        
+       
+         
+        
+         
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
 
 
@@ -428,61 +510,26 @@ top:800px;
     </div>
     <div class="section">
         <div class="ym3">
-          <div class="zuopin1">
-
-               <ul>
-                   <li>
-                      <div class="logo"><img src="u=4180843257,938680384&fm=23&gp=0.jpg" alt=""></div>
-                       <a href="凡客官网/index.html" target="_blank">凡客官网</a>
-                   </li>
-                   <li>
-                       <div class="logo"><img src="u=565358412,1542626577&fm=23&gp=0.jpg" alt=""></div>
-                       <a href="小米官网/index.html" target="_blank">小米官网</a>
-                   </li>
-                   <li>
-                       <div class="logo"><img src="u=3571031285,1754954697&fm=23&gp=0.jpg" alt=""></div>
-                       <a href="天猫官网/天猫.html" target="_blank">天猫官网</a>
-                   </li>
-                   <li>
-                       <div class="logo"><img src="下载 (1).jpg" alt=""></div>
-                       <a href="京东官网/index.html" target="_blank">京东官网</a>
-                   </li>
-                   <li>
-                       <div class="logo"><img src="u=2310780777,1689969251&fm=23&gp=0.jpg" alt=""></div>
-                       <a href="银泰官网/index.html" target="_blank">银泰官网</a>
-                   </li>
-                   <li>
-                       <div class="logo"><img src="下载 (2).jpg" alt=""></div>
-                       <a href="中国移动官网/index.html" target="_blank">移动官网</a>
-                   </li>
-                   <li>
-                       <div class="logo"><img src="u=363530098,4154259185&fm=23&gp=0.jpg" alt=""></div>
-                       <a href="沙发官网/index.html" target="_blank">沙发官网</a>
-                   </li>
-               </ul>
+            <div class="container1">
+    <div id="slide" class="slide" class="index-slide" alt="star">
+        <!-- 轮播图片数量可自行增减 -->
+        <a href="小米官网/index.html"><div class="img"><img src="image/1.png"/></div></a>
+        <a href="京东官网/index.html"><div class="img"><img src="image/2.png"/></div></a>
+        <a href="https://grdktv11.duapp.com"><div class="img"><img src="image/3.png"/></div></a>
+        <a href="https://boyastore.duapp.com/"><div class="img"><img src="image/4.png"/></div></a>
+        <a href="https://createhome.duapp.com/"><div class="img"><img src="image/5.png"/></div></a>
+        <a href="https://grdnewsapp.duapp.com"><div class="img"><img src="image/6.png"/></div></a>
+        <a href=""><div class="img"><img src="image/7.png"/></div></a>
 
 
 
-
-          </div>
-            <!--<div class="zpzs">-->
-
-                <!--<ul>-->
-                    <!--<li>作</li>-->
-                    <!--<li>品</li>-->
-                    <!--<li>展</li>-->
-                    <!--<li>示</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-          <div class="zuopin2">
-
-              <ul>
-                  <li><a href="扫雷小游戏/index.html" target="_blank">扫雷小游戏</a></li>
-                  <li><a href="打字游戏/打字游戏.html" target="_blank">打字游戏</a></li>
-                  <li><a href="TODOlist/TOdolist.html" target="_blank">TODOlist</a></li>
-                  <li><a href="画板/图板.html" target="_blank">画板</a></li>
-              </ul>
-          </div>
+        <div class="slide-bt"></div>
+    </div>
+    <button onclick="left()">上一页</button>
+    <button onclick="right()">下一页</button>
+</div>
+           
+         
         </div>
     </div>
     <div class="section">
@@ -516,6 +563,8 @@ top:800px;
     <!--<div class="section"></div>-->
 </div>
 <script src="echarts.js"></script>
+<script src="lunbo.js"></script>
+
 <script>
     $(".container").fullpage({
         sectionsColor:["","","",""],
@@ -534,13 +583,10 @@ top:800px;
 
             }
             if(index==3){
+                
+              
 
-                $(".zuopin1").css("opacity",1)
-                $(".zuopin2").css("opacity",1)
-                $(".zpzs").css("width",30);
-                $(".zpzs").css("height",200);
 
-//                $(".zpzs").animate({top:300})
             }
             if(index==4){
                 $(".dianhua").animate({left:540})
@@ -581,13 +627,13 @@ $(".dizhi").animate({top:480})
             data:['销量']
         },
         xAxis: {
-            data: ["PS","AI","HTML5","CSS","JS","Jquery"]
+            data: ["HTML","css","js","PHP","vue.js","react.js"]
         },
         yAxis: {},
         series: [{
             name: '掌握情况',
             type: 'bar',
-            data: [82, 80,90, 85, 80, 86]
+            data: [89,85,80,79,78,80]
         }]
     };
 
