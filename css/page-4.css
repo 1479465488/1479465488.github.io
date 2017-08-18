@@ -30,7 +30,9 @@
     background-color: transparent;
     border:0;
 }
-
+.aa{
+    margin-left:200px;
+}
 #item-4 .thumbnail .caption {
     color: #000000;
     padding: 9px;
